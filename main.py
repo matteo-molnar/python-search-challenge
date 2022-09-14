@@ -63,6 +63,7 @@ def traverse(from_row, from_column, to_row, to_column, map_matrix):
     route_exists = is_reachable(from_row+1, from_column, to_row, to_column, map_matrix)
     if (route_exists):
       return route_exists
+
   #Traverse Right
   if (from_column+1 <= max_column
       and visited[from_row][from_column+1] != True
@@ -71,6 +72,7 @@ def traverse(from_row, from_column, to_row, to_column, map_matrix):
     route_exists = is_reachable(from_row, from_column+1, to_row, to_column, map_matrix)
     if (route_exists):
       return route_exists
+
   #Traverse Up
   if (from_row-1 >= 0
       and visited[from_row-1][from_column] != True
@@ -79,6 +81,7 @@ def traverse(from_row, from_column, to_row, to_column, map_matrix):
     route_exists = is_reachable(from_row-1, from_column, to_row, to_column, map_matrix)
     if (route_exists):
       return route_exists
+
   #Traverse Left
   if (from_column-1 >= 0
       and visited[from_row][from_column-1] != True
